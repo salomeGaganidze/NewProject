@@ -29,3 +29,17 @@
 .myf {
     padding: 10px;
 }
+
+.stars 
+{
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.req 
+{
+    font-size: 12px;
+    padding: 5px;
+    color: rgb(206, 26, 26);
+}

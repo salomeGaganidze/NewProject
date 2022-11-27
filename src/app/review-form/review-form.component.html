@@ -1,38 +1,46 @@
 <app-oneproduct></app-oneproduct>
 
 <div class="form-div">
-<form >
+<form #reviewForm="ngForm" (ngSubmit)="onSubmit(reviewForm)">
     <div class="myf">
     <div class="form-row">
         <h2 class="title">Product Review</h2>
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Name</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-      </div>
+        <label >First name</label>
+        <input type="firstnm" class="form-control"  placeholder="First name" ngModel name="Fname" required  #firstn="ngModel">
+      
+        <div class="text-danger"  class="req"  *ngIf='!firstn.valid && firstn.touched'>
+          <p> * This field is required</p>
+        </div>
+       
+    </div>
     </div>
     </div>
 
     <div class="myf">
       <div class="form-group col-md-6">
-        <label for="inputPassword4">LastName</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <label >Last name</label>
+        <input type="lastnm" class="form-control" placeholder="Last name" ngModel name="Lname" required #lastn="ngModel">
+        <div class="text-danger"  class="req"  *ngIf='!lastn.valid && lastn.touched'>
+            <p>* This field is required</p>
+          </div>
       </div>
     </div>
 
-    <div class="myf">
-    <div class="form-group col-md-6">
-      <label for="inputAddress">Email</label>
-      <input  class="form-control" id="inputAddress" placeholder="Your Email">
-    </div>
-    </div>
 
    <div class="myf">
     <div class="form-row ">
       <div class="form-group col-md-4">
-        <label for="inputState">Which Products Are You Reviewing ? </label>
-        <select id="inputState" class="form-control">
-          <option selected>Please Choose ...</option>
+        <label >Please Rate   </label>
+        <select class="form-control"  ngModel name="chooseReaction" required  #ratenum="ngModel">
+          <option  >Satisfied</option>
+          <option > Neutral</option>
+          <option > Dissatisfied</option>
         </select>
+        <div class="text-danger"  class="req"  *ngIf='!ratenum.valid && ratenum.touched'>
+            <p>* This field is required</p>
+          </div>
+
       </div>
     </div>
     </div>
@@ -40,13 +48,28 @@
 
     <div class="myf">
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Review</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"  placeholder="Your Review"></textarea>
+        <label >Review</label>
+        <textarea class="form-control"  rows="4"  placeholder="Your Review"  ngModel name="review" required #youRev="ngModel"></textarea>
     </div>
+    <div class="text-danger"  class="req"  *ngIf='!youRev.valid && youRev.touched'>
+        <p>* This field is required</p>
+      </div>
    </div>
 
+  <div class="stars">
+       <strong>Star Rate : </strong>  <br>
+   <app-starts [starNum]="5"  (myOutpt)="getchildsdt($event)" >  </app-starts>
+  </div>
+     
+  <div class="stars">
+   <i><p> {{myDate | date : 'mediumDate' : 'MMM d, y' }}</p></i>
+  </div>
+    
+
+
+
    <div class="myf">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!reviewForm.valid">Submit</button>
     </div>
 
   </form>

@@ -5,41 +5,29 @@ import { ProductsComponent } from './shoppindcard/products/products.component';
 import { TodoComponent } from './todo/todo.component';
 import { OddEvenComponent } from './odd-even/odd-even.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MainComponent } from './main/main.component';
+import { LoginComponent } from './auth/login/login.component';
+import { HeaderComponent } from './header/header.component';
 
 
 const ROUTES : Route [] =  
 [
-
 {
-  path :'',
-  component : ProductsComponent,
-  pathMatch : 'full'
- 
+  path : 'main' ,
+  loadChildren : () => import ('./main/main.module').then(m => m.MainModule)
+}
+ ,
+{
+  path : '' ,
+  redirectTo : 'main',
+  pathMatch: 'full'
 }
 ,
 {
-  path :'products',
-  component : ProductsComponent,
-  pathMatch : 'full'
-}
-,
-{
-  path :'todo',
-  component : TodoComponent,
-  pathMatch : 'full'
-},
-{
-  path :'home',
-  redirectTo : '' 
-} ,
-{
-  path : 'oddeven',
-  component : OddEvenComponent
-},
-{
-  path : 'reviewform' ,
-  component : ReviewFormComponent
-}
+  path : '**' ,
+  component : PageNotFoundComponent
+} 
 
 ];
 export const myRout = RouterModule.forRoot(ROUTES);
