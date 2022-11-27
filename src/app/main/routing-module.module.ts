@@ -19,6 +19,12 @@ const ROUTES : Route [] =
   children : 
   [
     {
+      path :'',
+      component : ReviewFormComponent,
+       }
+    ,
+
+    {
   path :'products',
   component : ProductsComponent,
    }
