@@ -1,0 +1,10 @@
+
+<div *ngFor="let item of MyArray" class="dd">
+
+    <div>
+        <p class="fl"> შედეგი : {{item}}  </p>
+        <p  [ngClass]="setmyClass(item)">{{item%2==0 ?  'ლუწი' : 'კენტი' }} </p>
+    </div>
+    
+    
+</div>

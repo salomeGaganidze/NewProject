@@ -1,0 +1,25 @@
+
+.card
+{
+    margin: 10px;
+}
+
+.user-action {
+display: flex;
+margin-left: 2 px;
+border: 1px solid ;
+}
+
+
+.name  , .chk , .option
+{
+width: auto ;
+margin: 10px;
+
+}
+
+.btn 
+{
+   margin-top: 5px;
+
+}
