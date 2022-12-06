@@ -9,6 +9,7 @@ import { ProductsComponent } from '../shoppindcard/products/products.component';
 import { TodoComponent } from '../todo/todo.component';
 import { OddEvenComponent } from '../odd-even/odd-even.component';
 import { SubmmitResultComponent } from '../submmit-result/submmit-result.component';
+import { ReactiveFormComponent } from '../reactive-form/reactive-form.component';
 
 const ROUTES : Route [] = 
 [
@@ -20,7 +21,7 @@ const ROUTES : Route [] =
   [
     {
       path :'',
-      component : ReviewFormComponent,
+      component : ReactiveFormComponent,
        }
     ,
 
@@ -46,6 +47,10 @@ const ROUTES : Route [] =
 {
   path:'submit',
   component : SubmmitResultComponent
+},
+{
+  path:'reactivereviewform',
+  component : ReactiveFormComponent
 }
   ]
 

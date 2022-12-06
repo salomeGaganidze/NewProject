@@ -39,8 +39,8 @@ import { SubmmitResultComponent } from '../submmit-result/submmit-result.compone
   imports: [
     CommonModule,
     FormsModule,
-  
     RoutingModuleModule
+
   ],
   exports :
   [
