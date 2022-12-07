@@ -15,6 +15,7 @@ export class ReactiveResultComponent implements OnInit {
 }
 
   ngOnInit(): void {
+    console.log(this.myFormInp.review)
   }
 
 }

@@ -1,5 +1,13 @@
-
 <div class="form-div">
-   <p> <strong>Reviewer :</strong>  {{myFormInp.firstName}}</p>
-   <p> {{myFormInp.review}}</p>
+
+    <div> 
+  <div *ngIf="myFormInp.review==undefined ||  myFormInp.review==null ">
+       <h6> No Result </h6>
+  </div>
+
+  <div *ngIf="myFormInp.review!==undefined &&  myFormInp.review!==null ">
+    <p><strong>Reviewer :</strong> {{ myFormInp.firstName }}</p>
+    <p>{{ myFormInp.review }}</p>
+  </div>
+  
 </div>
