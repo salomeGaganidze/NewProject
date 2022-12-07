@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component,  OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { lengthValidator } from './validators/lengthValid';
 
@@ -8,6 +9,10 @@ import { lengthValidator } from './validators/lengthValid';
   styleUrls: ['./reactive-form.component.css'],
 })
 export class ReactiveFormComponent implements OnInit {
+ 
+
+
+
   myForm: FormGroup;
   constructor() {
     this.myForm = new FormGroup({
@@ -22,7 +27,8 @@ export class ReactiveFormComponent implements OnInit {
     });
   }
   myRate: number = 0;
-  myDate: Date = new Date();
+  myDate : Date = new Date;
+
 
   ngOnInit(): void {
     console.log(this.FirstName);
@@ -36,7 +42,7 @@ export class ReactiveFormComponent implements OnInit {
     console.log(this.myForm);
 
     if (this.myForm.valid) {
-      alert(JSON.stringify(this.myForm.value));
+      console.log('Invalid');
       this.myForm.reset();
     } else {
       console.log('Invalid');

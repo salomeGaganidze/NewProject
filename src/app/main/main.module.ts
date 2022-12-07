@@ -16,6 +16,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RoutingModuleModule } from './routing-module.module';
 import { LoginComponent } from '../auth/login/login.component';
 import { SubmmitResultComponent } from '../submmit-result/submmit-result.component';
+import { ReactiveResultComponent } from '../reactive-result/reactive-result.component';
 
 
 
@@ -33,7 +34,8 @@ import { SubmmitResultComponent } from '../submmit-result/submmit-result.compone
     ReviewFormComponent,
     OneproductComponent,
     LoginComponent ,
-    SubmmitResultComponent
+    SubmmitResultComponent,
+    ReactiveResultComponent
     
   ],
   imports: [
@@ -55,7 +57,8 @@ import { SubmmitResultComponent } from '../submmit-result/submmit-result.compone
     OddEvenComponent,
     ReviewFormComponent,
     OneproductComponent,
-    LoginComponent 
+    LoginComponent  ,
+    ReactiveResultComponent
   ]
 })
 export class MainModule { }
