@@ -6,6 +6,7 @@
   </div>
 
   <div *ngIf="myFormInp.review!==undefined &&  myFormInp.review!==null ">
+     <app-show-starts [myStarst]="this.myStart"></app-show-starts>
     <p><strong>Reviewer :</strong> {{ myFormInp.firstName }}</p>
     <p>{{ myFormInp.review }}</p>
   </div>

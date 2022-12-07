@@ -1,5 +1,5 @@
 
-import { Component,  OnInit } from '@angular/core';
+import { Component,  EventEmitter,  OnInit, Output } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { lengthValidator } from './validators/lengthValid';
 
@@ -12,7 +12,6 @@ export class ReactiveFormComponent implements OnInit {
  
 
 
-
   myForm: FormGroup;
   constructor() {
     this.myForm = new FormGroup({
@@ -20,7 +19,7 @@ export class ReactiveFormComponent implements OnInit {
       lastName: new FormControl(null, [Validators.required, lengthValidator]),
       email: new FormArray([new FormControl(null, Validators.required)]),
       rate: new FormControl(null, Validators.required),
-      review: new FormControl('Review .. ', [
+      review: new FormControl(null, [
         Validators.minLength(5),
         Validators.required,
       ]),
@@ -33,6 +32,7 @@ export class ReactiveFormComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.FirstName);
     console.log(this.email['controls']);
+    
   }
   getchildsdt(DT: number) {
     this.myRate = DT;

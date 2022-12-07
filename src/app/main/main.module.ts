@@ -17,6 +17,7 @@ import { RoutingModuleModule } from './routing-module.module';
 import { LoginComponent } from '../auth/login/login.component';
 import { SubmmitResultComponent } from '../submmit-result/submmit-result.component';
 import { ReactiveResultComponent } from '../reactive-result/reactive-result.component';
+import { ShowStartsComponent } from '../show-starts/show-starts.component';
 
 
 
@@ -35,7 +36,8 @@ import { ReactiveResultComponent } from '../reactive-result/reactive-result.comp
     OneproductComponent,
     LoginComponent ,
     SubmmitResultComponent,
-    ReactiveResultComponent
+    ReactiveResultComponent,
+    ShowStartsComponent
     
   ],
   imports: [
@@ -58,7 +60,8 @@ import { ReactiveResultComponent } from '../reactive-result/reactive-result.comp
     ReviewFormComponent,
     OneproductComponent,
     LoginComponent  ,
-    ReactiveResultComponent
+    ReactiveResultComponent,
+    ShowStartsComponent
   ]
 })
 export class MainModule { }

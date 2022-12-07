@@ -10,6 +10,7 @@ import { RoutingModuleModule } from './main/routing-module.module';
 import { SubmmitResultComponent } from './submmit-result/submmit-result.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveResultComponent } from './reactive-result/reactive-result.component';
+import { ShowStartsComponent } from './show-starts/show-starts.component';
 
 @NgModule({
 

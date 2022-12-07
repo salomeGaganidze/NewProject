@@ -9,7 +9,8 @@ export class ReactiveResultComponent implements OnInit {
     
   
   @Input() myFormInp!: userInt ;
-
+  @Input() myStart ! :number ;
+  
   constructor() { 
  
 }
